@@ -1,3 +1,9 @@
+# セットアップ
+1. make create-project (makeコマンドをインストールしていない人はMakefileのcreate-projectの項目を順番に実行)
+2. docker compose exec app npm install
+3. docker compose exec app npm run build
+4. docker compose exec app php artisan migrate:fresh --seed
+
 # docker-laravel 🐳
 
 <p align="center">

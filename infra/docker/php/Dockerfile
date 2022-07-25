@@ -22,7 +22,7 @@ RUN apt-get update \
     libzip-dev \
     libicu-dev \
     libonig-dev \
-    nodejs \
+    nodejs npm \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && locale-gen en_US.UTF-8 \
