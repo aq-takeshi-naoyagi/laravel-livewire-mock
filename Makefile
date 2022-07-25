@@ -13,10 +13,10 @@ create-project:
 	docker compose exec app php artisan storage:link
 	docker compose exec app chmod -R 777 storage bootstrap/cache
 	@make fresh
-init-jetstream-livewire
-    @make init
-    docker compose exec app npm install
-    docker compose exec app npm run dev
+init-jetstream-livewire:
+	@make init
+	docker compose exec app npm install
+	docker compose exec app npm run dev
 install-recommend-packages:
 	docker compose exec app composer require doctrine/dbal
 	docker compose exec app composer require --dev ucan-lab/laravel-dacapo
