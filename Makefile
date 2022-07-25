@@ -17,6 +17,8 @@ init-jetstream-livewire:
 	@make init
 	docker compose exec app npm install
 	docker compose exec app npm run dev
+make mix:
+	docker compose exec app npm run development
 install-recommend-packages:
 	docker compose exec app composer require doctrine/dbal
 	docker compose exec app composer require --dev ucan-lab/laravel-dacapo
