@@ -1,5 +1,8 @@
-# laravel+jetStream+livewireセットアップ
-1. `make init-jetstream-livewire` を実行 ※makeコマンドをインストールしてない人はMakefireの該当項目の通り実行してください
+# setup
+1. `make init-jetstream-livewire` を実行 
 2. http://localhost でアクセス可能
 
-css, jsのリコンパイルは `make mix`
+※makeコマンドをインストールしてない人はMakefireの該当項目の通り実行してください
+
+# css, jsの更新
+1. `make mix`
