@@ -1,7 +1,6 @@
 # laravel+jetStream+livewireセットアップ
-`make init-jetstream-livewire` を実行
-makeコマンドをインストールしてない人はMakefireの該当項目の通り実行してください
--> 実行後 http://localhost でアクセス可能
+1. `make init-jetstream-livewire` を実行 ※makeコマンドをインストールしてない人はMakefireの該当項目の通り実行してください
+2. http://localhost でアクセス可能
 
 # docker-laravel 🐳
 
