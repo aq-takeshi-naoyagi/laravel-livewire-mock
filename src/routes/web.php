@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Controller;
+use App\Http\Livewire\Counter;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,12 +18,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([
-    'auth:sanctum',
+Route::middleware(['auth:sanctum',
     config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+    'verified']
+)->get('/dashboard',[App\Http\Controllers\Controller::class,'sort']
+)->name('dashboard');
+
+Route::middleware(['auth:sanctum',
+        config('jetstream.auth_session'),
+        'verified']
+)->post('/dashboard',[App\Http\Controllers\Controller::class,'sort']
+)->name('dashboard');
+
+//タスクフォームの送信
+Route::middleware(['auth:sanctum', 'verified']
+)->post('/create',[Controller::class,'create']
+)->name('create');
+
+Route::middleware(['auth:sanctum', 'verified']
+)->delete('/destroy',[Controller::class,'destroy']
+)->name('destroy');
+
+Route::middleware(['auth:sanctum', 'verified']
+)->post('/search',[Controller::class,'search']
+)->name('search');
+
+Route::middleware(['auth:sanctum', 'verified']
+)->get('/modaltest',[Controller::class,'modaltest']
+)->name('modaltest');
