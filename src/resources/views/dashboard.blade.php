@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 {{--                <livewire:autocomplete />--}}
-                <h1><b>プロジェクト登録</b></h1>
+                <h1 class="custom"><b>プロジェクト登録</b></h1>
                 {{ Form::open(['route' => 'create']) }}
                 <div class="form-group">
                     {{ Form::label('task', '案件名：') }}
@@ -102,7 +102,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
                 <h1><b>一覧表示</b></h1>
-                <table class="table table-striped">
+                <table class="table table-striped ">
                     <thead>
                     <tr>
                         <th>タスク</th>
